@@ -1,6 +1,6 @@
 class MinStack {
 
-    int min; int head = -1;
+    int min;
     Stack<Integer> stack;
     Stack<Integer> mstack;
     public MinStack() {
@@ -13,7 +13,6 @@ class MinStack {
         if( mstack.isEmpty() || val <= mstack.peek()){
             mstack.push(val);
         }
-        head++;
     }
     
     public void pop() {
@@ -22,7 +21,6 @@ class MinStack {
             mstack.pop();
         }
         stack.pop();
-        head--;
     }
     
     public int top() {
