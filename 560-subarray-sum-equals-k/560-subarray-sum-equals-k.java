@@ -8,10 +8,8 @@ class Solution {
             if(map.containsKey(sum - k)){
                 res = res + map.get(sum - k);
             }
-            if(map.containsKey(sum)) map.put(sum, map.get(sum) + 1);
-            else map.put(sum, 1);
+             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
-        // System.out.println(map);
         return res;
     }
 }
