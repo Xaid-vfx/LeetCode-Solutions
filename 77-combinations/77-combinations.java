@@ -1,6 +1,5 @@
 class Solution {
     public void helper(List <List<Integer>> list, List<Integer> temp, int j, int n, int k){
-        System.out.println(temp);
         if(k == 0){
             list.add(new ArrayList(temp));
             return;
