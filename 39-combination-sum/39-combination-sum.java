@@ -4,7 +4,6 @@ class Solution {
         else{
             for(int i = start; i < candidates.length; i++){
                 if(target - candidates[i] >= 0){
-                    System.out.println(temp);
                     temp.add(candidates[i]);
                     backtrack(list, temp, candidates, target - candidates[i], i);
                     temp.remove(temp.size() - 1);
